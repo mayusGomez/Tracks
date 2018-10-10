@@ -12,10 +12,10 @@ Personal example
 * Install Android studio
 * Clone this repository: `git clone https://....
 * Run `npm install` from the project root.
+* Replace the google API for maps, on "index.html" file search the line: "<script src="http://maps.google.com/maps/api/js?key="></script>" and add your Googke Map Key.
 * Add platform: ionic cordova platform add ios
 * Create the executable: ionic cordova build
-* Replace the google API for maps, on "index.html" file search the line: "<script src="http://maps.google.com/maps/api/js?key="></script>" and add your Googke Map Key.
-* Run `ionic serve` in a terminal from the project root.
+* Install executable
 
 
 
