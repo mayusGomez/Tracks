@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>GPS Track</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full icon-left (click)="startTracking()" *ngIf="!isTracking">
+    <ion-icon name="locate"></ion-icon>
+    Start Tracking
+  </button>
+  <button ion-button full color="danger" icon-left (click)="stopTracking()" *ngIf="isTracking">
+      <ion-icon name="hand"></ion-icon>
+      Stop Tracking
+  </button>
+
+  <div #map id="map"></div>
+
+  <ion-list *ngIf="trackedRoute.length > 0" >
+
+    <ion-item *ngFor="let route of trackedRoute">
+      {{ route.lat }}, {{ route.lng }}
+    </ion-item>
+    
+  </ion-list>  
+
+</ion-content>
